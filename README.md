@@ -10,7 +10,7 @@ A set of outputs related to our runtime of 3body quantum problems
 
     def M(i):
       """
-      preprocessing...
+      preprocessing...remove lowest state as its not allowed by fermi statistics.
       returns a matrix
       """
       u = np.reshape(m.loc[i].values,(24,2,24,2)))
