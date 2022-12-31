@@ -1,4 +1,7 @@
 # 3body
+
+## Quick writeup at https://cepheus.quantumgalaxies.com/whitepages
+
 A set of outputs related to our runtime of 3body quantum problems
 
     import pandas as pd
