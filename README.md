@@ -2,6 +2,8 @@
 
 ## Quick writeup at https://cepheus.quantumgalaxies.com/whitepages
 
+##WARNING, we found a bug and smashed it that could impact the quality of the computation...the corrected file will probably be up around Jan 7th or so...
+
 A set of outputs related to our runtime of 3body quantum problems
 
     import pandas as pd
