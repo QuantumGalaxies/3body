@@ -2,7 +2,11 @@
 
 ## Quick writeup at https://cepheus.quantumgalaxies.com/whitepages
 
-##WARNING, we found a bug and smashed it that could impact the quality of the computation...the corrected file will probably be up around Jan 7th or so...
+## WARNING, we found a bug and smashed it that could impact the quality of the computation...the corrected file will probably be up around Jan 21th or so...
+
+## WARNING, processing, looks like its gonna be a few weeks...SORRY, its debugged pretty well, but runtime is ongoing on a smaller machine. 
+## WARNING, you see, the critcal component here is the Condition Number of the overlap matrix ... and its not there yet.
+
 
 A set of outputs related to our runtime of 3body quantum problems
 
