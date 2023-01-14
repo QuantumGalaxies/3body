@@ -22,7 +22,7 @@ A set of outputs related to our runtime of 3body quantum problems
       preprocessing...remove lowest state as its not allowed by fermi statistics.
       returns a matrix
       """
-      MM = len(m.loc[0])
+      MM = int(np.sqrt(len(m.loc[0])))
       
       u = np.reshape(m.loc[i].values,(MM,MM)))
       return (u)
