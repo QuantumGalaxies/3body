@@ -2,20 +2,19 @@
 
 ## Quick writeup at https://cepheus.quantumgalaxies.com/whitepages
 
-## WARNING, we found a bug and smashed it that could impact the quality of the computation...the corrected file will probably be up around Jan 14
-th or so...
-
-## WARNING, processing, I figured out why this last week's run failed. I had an accidential flag switched which caused SA to apply too often!
-## WARNING, I had to restart today, maybe I will push this to TTU servers..
+EE = spin 1/2 subspace
+A2 = spin 3/2 subspace
 
 
 A set of outputs related to our runtime of 3body quantum problems
 
     import pandas as pd
     import numpy as np
+    
+    desc = ['EE','A2']
 
 
-    m = pd.read_csv('matrix_0.csv')
+    m = pd.read_csv('matrix_desc[x]_.csv')
     m = m.groupby(['Operator','bra-left','bra-right'])['Element'].mean()
 
     def M(i):
@@ -23,8 +22,10 @@ A set of outputs related to our runtime of 3body quantum problems
       preprocessing...remove lowest state as its not allowed by fermi statistics.
       returns a matrix
       """
-      u = np.reshape(m.loc[i].values,(24,2,24,2)))
-      return np.transpose(u,(1,3,0,2))[0][0][1:24,1:24]
+      MM = len(m.loc[0])
+      
+      u = np.reshape(m.loc[i].values,(MM,MM)))
+      return (u)
 
     def H(i):
       """
