@@ -19,8 +19,7 @@ A set of outputs related to our runtime of 3body quantum problems
 
     def M(i):
       """
-      preprocessing...remove lowest state as its not allowed by fermi statistics.
-      returns a matrix
+      preprocessed already and divided by symmetry group.
       """
       MM = int(np.sqrt(len(m.loc[0])))
       
