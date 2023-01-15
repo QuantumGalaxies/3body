@@ -1,0 +1,9 @@
+Symmetry types define how the interchange of particle labels change the signage of the wave function.
+
+A1 = Disallowed by fermi statistics, but generally completley spatial symmetric.
+A2 = antisymmetric spatial label exchange --> TIES TO 3/2 spin
+EE = doubly degenerate structure, requires at least two states in the density to be legit! --> TIES TO 1/2 spin
+
+H0-A2 and A2 are orthogonal to H0-EE and A2 as the Hamiltonian, H0, is A1.
+
+I have released roughly the energy band from 3 Ha, ground state, to 4 Ha in both symmetry groups.
