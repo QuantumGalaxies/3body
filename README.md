@@ -14,14 +14,14 @@ A set of outputs related to our runtime of 3body quantum problems
     desc = ['EE','A2']
 
 
-    m = pd.read_csv('matrix_desc[x]_.csv')
+    m = pd.read_csv('matrix_'+desc[x]+'_.csv')
     m = m.groupby(['Operator','bra-left','bra-right'])['Element'].mean()
 
     def M(i):
       """
       preprocessed already and divided by symmetry group.
       """
-      MM = int(np.sqrt(len(m.loc[0])))
+      MM = len(m.loc[0].loc[0])
       
       u = np.reshape(m.loc[i].values,(MM,MM)))
       return (u)
