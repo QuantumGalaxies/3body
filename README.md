@@ -14,31 +14,31 @@ A set of outputs related to our runtime of 3body quantum problems
     desc = ['EE','A2']
 
 
-    m = pd.read_csv('matrix_'+desc[x]+'_.csv')
+    m = pd.read_csv('matrix_'+desc[x]+'_2.csv')
     m = m.groupby(['Operator','bra-left','bra-right'])['Element'].mean()
 
     def M(i):
-      """
-      preprocessed already and divided by symmetry group.
-      """
-      MM = len(m.loc[0].loc[0])
+       """
+       preprocessed already and divided by symmetry group.
+       """
+       MM = int(np.sqrt(len(m.loc[0])))
       
-      u = np.reshape(m.loc[i].values,(MM,MM)))
-      return (u)
+       u = np.reshape(m.loc[i].values,(MM,MM))
+       return (u)
 
     def H(i):
-      """
-      Hamiltonian on arg 0 and polarizations in x, y, and z with 1, 2, 3.
-      """
-      if i == 0: 
+       """
+       Hamiltonian on arg 0 and polarizations in x, y, and z with 1, 2, 3.
+       """
+       if i == 0: 
           return sum([ M(i+1) for i in range(7)] )
-      else:
+       else:
           return M(i+7)
       
     def S():
-      """
-      Overlap
-      """  
-      return M(0)
+       """
+       Overlap
+       """  
+       return M(0)
   
   
